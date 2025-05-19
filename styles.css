@@ -36,7 +36,7 @@ hr {
     margin: 30px 0;
 }
 
-
+/* Botones */
 button {
     background-color: #800080; /* morado */
     color: white;
@@ -53,6 +53,7 @@ button:hover {
     background-color: #ff0000; /* rojo al pasar el mouse */
 }
 
+/* Enlaces */
 a {
     color: white;
     text-decoration: underline; /* para que se note que es un enlace, opcional */
@@ -62,3 +63,11 @@ a:hover {
     color: #ffccff; /* un color suave cuando pasas el cursor, opcional */
 }
 
+/* Excluir el id texto de cualquier caja o estilo de fondo */
+#texto {
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    max-width: none !important;
+    color: inherit;
+}
