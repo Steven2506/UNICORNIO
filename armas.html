@@ -1,60 +1,252 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-<header>
-  <nav class="navbar">
-    <ul class="menu">
-      <li><a href="index.html">Inicio</a></li>
-      <li class="dropdown">
-        <a href="leyendas.html" class="dropbtn">Leyendas</a>
-        <ul class="dropdown-content">
-          <li><a href="leyendas.html#Apoyo">Apoyo</a></li>
-          <li><a href="leyendas.html#Control">Control</a></li>
-          <li><a href="leyendas.html#Reconocimiento">Reconocimiento</a></li>
-          <li><a href="leyendas.html#Escaramuzador">Escaramuzador</a></li>
-          <li><a href="leyendas.html#Asalto">Asalto</a></li>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="leyendas.html" class="dropbtn">Leyendas</a>
+            <ul class="dropdown-content">
+              <li><a href="leyendas.html#Apoyo">Apoyo</a></li>
+              <li><a href="leyendas.html#Control">Control</a></li>
+              <li><a href="leyendas.html#Reconocimiento">Reconocimiento</a></li>
+              <li><a href="leyendas.html#Escaramuzador">Escaramuzador</a></li>
+              <li><a href="leyendas.html#Asalto">Asalto</a></li>
+            </ul>
+          </li>
+          <li><a href="mapas.html">Mapas</a></li>
+          <li><a href="armas.html">Armas</a></li>
         </ul>
-      </li>
-      <li><a href="mapas.html">Mapas</a></li>
-      <li><a href="armas.html">Armas</a></li>
-    </ul>
-  </nav>
-</header>
-        <h2>Más Información proximamente</h2>
-<script>
-  document.querySelectorAll('nav ul li').forEach(function(menuItem) {
-    let timeout;
+      </nav>
+    </header>
 
-    menuItem.addEventListener('mouseenter', () => {
-      clearTimeout(timeout);
-      const submenu = menuItem.querySelector('ul');
-      if(submenu) {
-        submenu.style.opacity = '1';
-        submenu.style.visibility = 'visible';
-      }
-    });
+    <p>
+      En esta sección encontrareís las armas según el tipo, en Apex Legends
+      contamos con 8 tipos de armas, que son los siguientes:
+    </p>
 
-    menuItem.addEventListener('mouseleave', () => {
-      const submenu = menuItem.querySelector('ul');
-      if(submenu) {
-        timeout = setTimeout(() => {
-          submenu.style.opacity = '0';
-          submenu.style.visibility = 'hidden';
-        }, 500); // Espera 500ms antes de ocultar para facilitar selección
-      }
-    });
-  });
-</script>
+    <h2 class="toggle">▶RIFLES DE ASALTO</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>Havoc:</strong> Munición de energía</p>
+        <img src="armas/havoc.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Flatline:</strong> Munición Pesada</p>
+        <img src="armas/Flatline.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Hemlok:</strong> Munición Pesada</p>
+        <img src="armas/Hemlok.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma">
+          <strong>Carabina R-301:</strong> Munición Ligera
+        </p>
+        <img src="armas/R301.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Nemesis:</strong> Munición Energía</p>
+        <img src="armas/Nemesis.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
 
-    </body>
+    <h2 class="toggle">▶SUBFUSILES</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>Alternator:</strong> Munición Ligera</p>
+        <img src="armas/alternator.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Prowler:</strong> Munición Pesada</p>
+        <img src="armas/prowler.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>R99:</strong> Munición Ligera</p>
+        <img src="armas/r99.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Volt:</strong> Munición de Energía</p>
+        <img src="armas/volt.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>C.A.R:</strong> Munición Pesada</p>
+        <img src="armas/car.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
+
+    <h2 class="toggle">▶AMETRALLADORAS</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>Devotion:</strong> Munición de energía</p>
+        <img src="armas/devotion.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>L-Star:</strong> Munición de Energía</p>
+        <img src="armas/lstar.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Spitfire:</strong> Munición Ligera</p>
+        <img src="armas/spitfire.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Rampage:</strong> Munición Pesada</p>
+        <img src="armas/rampage.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
+
+    <h2 class="toggle">▶ARMAS DE MEDIO ALCANCE</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>G7 SCOUT:</strong> Munición Ligera</p>
+        <img src="armas/g7.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Triple Take:</strong> Aparece en Packs de supervivencia</p>
+        <img src="armas/tripletake.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>30-30:</strong> Munición Pesada</p>
+        <img src="armas/3030.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Bocek:</strong> Flechas</p>
+        <img src="armas/bocek.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
+    
+    <h2 class="toggle">▶RIFLES DE FRANCOTIRADOR</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>Rifle de Cargas:</strong> Munición de Francotirador</p>
+        <img src="armas/rifledecargas.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Longbow:</strong> Munición de Francotirador</p>
+        <img src="armas/longbow.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Kraber:</strong> Aparece en Packs de Supervivencia</p>
+        <img src="armas/kraber.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Sentinel:</strong> Munición de Francotirador</p>
+        <img src="armas/sentinel.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
+    
+    <h2 class="toggle">▶PISTOLAS</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>RE-45:</strong> Munición de Ligera</p>
+        <img src="armas/re45.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>P2020:</strong> Munición Ligera</p>
+        <p class="nombre-arma">Disponibilidad a dos manos</p>
+        <img src="armas/longbow.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Wigman:</strong> Munición de Francotirador</p>
+        <img src="armas/wigman.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
+    
+    
+    <h2 class="toggle">▶ESCOPEETAS</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>EVA-8:</strong> Munición de Escopeta</p>
+        <img src="armas/Captura de pantalla 2025-05-22 200509.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Mastiff:</strong> Munición de Escoopeta</p>
+        <img src="armas/Captura de pantalla 2025-05-22 200520.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Mozambique:</strong> Munición de Escopeta</p>
+        <p class="nombre-arma">Disponible a dos manos</p>
+        <img src="armas/Captura de pantalla 2025-05-22 200536.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>PeaceKeeper:</strong> Munición de Escoopeta</p>
+        <img src="armas/Captura de pantalla 2025-05-22 200548.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
+    
+   
+  
+    <h2 class="toggle">▶EXPLOSIVOS</h2>
+    <section class="contenido">
+      <div class="arma">
+        <p class="nombre-arma"><strong>Granada de Fragmentación</strong></p>
+        <img src="armas/Captura de pantalla 2025-05-22 200604.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Electroestrella</strong></p>
+        <img src="armas/Captura de pantalla 2025-05-22 200623.png" style="width: 600px; height: auto" />
+      </div>
+      <div class="arma">
+        <p class="nombre-arma"><strong>Termita</strong></p>
+        <img  src="armas/Captura de pantalla 2025-05-22 200640.png" style="width: 600px; height: auto" />
+      </div>
+    </section>
+
+    <script>
+      // Menú desplegable con retardo
+      document.querySelectorAll("nav ul li").forEach(function (menuItem) {
+        let timeout;
+
+        menuItem.addEventListener("mouseenter", () => {
+          clearTimeout(timeout);
+          const submenu = menuItem.querySelector("ul");
+          if (submenu) {
+            submenu.style.opacity = "1";
+            submenu.style.visibility = "visible";
+          }
+        });
+
+        menuItem.addEventListener("mouseleave", () => {
+          const submenu = menuItem.querySelector("ul");
+          if (submenu) {
+            timeout = setTimeout(() => {
+              submenu.style.opacity = "0";
+              submenu.style.visibility = "hidden";
+            }, 500);
+          }
+        });
+      });
+
+      // Acordeón para armas
+      document.querySelectorAll(".toggle").forEach(function (toggle) {
+        toggle.addEventListener("click", function () {
+          const contenido = this.nextElementSibling;
+          const abierto = contenido.style.display === "block";
+
+          // Cerrar todos
+          document
+            .querySelectorAll(".contenido")
+            .forEach((c) => (c.style.display = "none"));
+          document
+            .querySelectorAll(".toggle")
+            .forEach(
+              (t) => (t.textContent = t.textContent.replace("▼", "▶"))
+            );
+
+          // Abrir el actual
+          if (!abierto) {
+            contenido.style.display = "block";
+            this.textContent = this.textContent.replace("▶", "▼");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
