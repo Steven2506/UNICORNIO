@@ -12,10 +12,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
     </head>
     <body>
+<header>
+  <nav class="navbar">
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="leyendas.html" class="dropbtn">Leyendas</a>
+        <ul class="dropdown-content">
+          <li><a href="leyendas.html#Apoyo">Apoyo</a></li>
+          <li><a href="leyendas.html#Control">Control</a></li>
+          <li><a href="leyendas.html#Reconocimiento">Reconocimiento</a></li>
+          <li><a href="leyendas.html#Escaramuzador">Escaramuzador</a></li>
+          <li><a href="leyendas.html#Asalto">Asalto</a></li>
+        </ul>
+      </li>
+      <li><a href="mapas.html">Mapas</a></li>
+      <li><a href="armas.html">Armas</a></li>
+    </ul>
+  </nav>
+</header>
+
+    
         <h1 id="texto">Aquí encontrarás la lista de leyendas según su tipo y todas sus especificaciones.</h1>
         
            <hr />
-        <h1>Leyendas de Clase Apoyo</h1>
+        <h1 id="Apoyo">Leyendas de Clase Apoyo</h1>
         
         <h2>Gibraltar</h2>
     <ul>
@@ -66,7 +87,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 </ul>
 
        <hr />
-     <h1>Leyendas de Clase Control</h1>
+     <h1 id="Control">Leyendas de Clase Control</h1>
 
     <h2>Caustic</h2>
     <ul>
@@ -102,7 +123,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <li><strong>Recogida Remota:</strong> Pueden recoger sus habilidades tácticas a distancia si no han sido destruidas.</li>
     </ul>
        <hr />
-    <h1>Leyendas de Clase Reconocimiento</h1>
+    <h1 id="Reconocimiento">Leyendas de Clase Reconocimiento</h1>
 
 <h2>Bloodhound</h2>
 <ul>
@@ -145,7 +166,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 </ul>
        <hr />
        
-    <h1>Clase Escaramuzador</h1>
+    <h1 id="Escaramuzador">Clase Escaramuzador</h1>
 
     <h2>Pathfinder</h2>
     <ul>
@@ -194,7 +215,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
     <hr />
 
-    <h1>Clase Asalto</h1>
+    <h1 id="Asalto">Clase Asalto</h1>
 
     <h2>Bangalore</h2>
     <ul>
@@ -234,8 +255,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <h3>Ventaja de Clase Asalto</h3>
     <p>Las leyendas de asalto tienen acceso a un compartimento oculto en las cajas de suministros que siempre contiene accesorios para armas, pueden llevar más munición por ranura, y obtienen mayor velocidad de recarga y movimiento temporalmente cuando su escudo es destruido.</p>
 
-    <button onclick="window.location.href='index.html'">Volver a Inicio</button>
-    <button onclick="window.location.href='mapas.html'">Mapas</button>
+<script>
+  document.querySelectorAll('nav ul li').forEach(function(menuItem) {
+    let timeout;
+
+    menuItem.addEventListener('mouseenter', () => {
+      clearTimeout(timeout);
+      const submenu = menuItem.querySelector('ul');
+      if(submenu) {
+        submenu.style.opacity = '1';
+        submenu.style.visibility = 'visible';
+      }
+    });
+
+    menuItem.addEventListener('mouseleave', () => {
+      const submenu = menuItem.querySelector('ul');
+      if(submenu) {
+        timeout = setTimeout(() => {
+          submenu.style.opacity = '0';
+          submenu.style.visibility = 'hidden';
+        }, 500); // Espera 500ms antes de ocultar para facilitar selección
+      }
+    });
+  });
+</script>
+
 
     
     </body>
