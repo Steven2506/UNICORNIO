@@ -123,9 +123,11 @@ body {
 }
 
 /* Para pantallas muy pequeñas, por ejemplo móviles pequeños */
-@media (max-width: 400px) {
-  nav ul li a {
-    font-size: 14px;
-    padding: 8px 6px;
+@media (max-width: 600px) {
+  .map-image {
+    width: 100% !important; /* sobreescribe el width inline */
+    height: auto !important;
+    max-width: 100%;
   }
 }
+
