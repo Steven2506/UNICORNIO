@@ -1,25 +1,64 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>CHULETA DE APEX</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" href="unicornio.jpg" type="image/jpeg" />
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Index</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
+<header>
+  <nav class="navbar">
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="leyendas.html" class="dropbtn">Leyendas</a>
+        <ul class="dropdown-content">
+          <li><a href="leyendas.html#Apoyo">Apoyo</a></li>
+          <li><a href="leyendas.html#Control">Control</a></li>
+          <li><a href="leyendas.html#Reconocimiento">Reconocimiento</a></li>
+          <li><a href="leyendas.html#Escaramuzador">Escaramuzador</a></li>
+          <li><a href="leyendas.html#Asalto">Asalto</a></li>
+        </ul>
+      </li>
+      <li><a href="mapas.html">Mapas</a></li>
+      <li><a href="armas.html">Armas</a></li>
+    </ul>
+  </nav>
+</header>
 
+<main>
+  <!-- Aquí tu contenido -->
+  <h1>Bienvenido a la página principal</h1>
+  <h2>Trailer de la nueva season</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/zeVwKk7_XHs?si=p5GEYGPXky0dMZGV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</main>
+<script>
+  document.querySelectorAll('nav ul li').forEach(function(menuItem) {
+    let timeout;
 
-    </head>
-    <body>
-        <p id="texto">BIENVENIDA</p>
-        <p>Aquí encontraras una lista de ñas leyendas de Apex, ordenadas segun sus clases, podrás ver sus habilidades y las ventajas que tiene cada clase para hacerte mas facil tu vuelta al Apex. :)</p>
-        <p>Haz clic <a href="leyendas.html">Leyendas</a> para ver la lista de leyendas</p>
-        <p>Haz clic <a href="mapas.html">Mapas</a> para ver la lista de leyendas</p>
+    menuItem.addEventListener('mouseenter', () => {
+      clearTimeout(timeout);
+      const submenu = menuItem.querySelector('ul');
+      if(submenu) {
+        submenu.style.opacity = '1';
+        submenu.style.visibility = 'visible';
+      }
+    });
 
-        
-    </body>
+    menuItem.addEventListener('mouseleave', () => {
+      const submenu = menuItem.querySelector('ul');
+      if(submenu) {
+        timeout = setTimeout(() => {
+          submenu.style.opacity = '0';
+          submenu.style.visibility = 'hidden';
+        }, 500); // Espera 500ms antes de ocultar para facilitar selección
+      }
+    });
+  });
+</script>
+
+</body>
 </html>
+
